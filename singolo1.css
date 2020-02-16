@@ -35,15 +35,12 @@ ul {
 /* header */
 
 .header {
-  background-color: #2d303a;
-  border-bottom: 5px solid #323746;
-}
-
-.header__wrapper {
-  display: flex;
+	display: flex;
   justify-content: space-between;
   padding-top: 35px;
   padding-bottom: 30px;
+  background-color: #2d303a;
+  border-bottom: 5px solid #323746;
 }
 
 /* logo */
@@ -162,13 +159,10 @@ ul {
 /* services */
 
 .services {
+	padding-top: 60px;
+  padding-bottom: 40px;
   background-color: #f2f2f2;
   border-bottom: 5px solid #ffffff;
-}
-
-.services__wrapper {
-  padding-top: 60px;
-  padding-bottom: 40px;
 }
 
 .services__title {
@@ -229,7 +223,7 @@ ul {
   font-family: "Lato";
   font-size: 12px;
   line-height: 1.9;
-  text-align: ;
+  text-align: justify;
   color: #666d89;
 }
 
