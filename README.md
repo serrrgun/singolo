@@ -1,4 +1,4 @@
 # singolo
 
 
-[link singolo]('https://serrrgun.github.io/singolo/)
+https://serrrgun.github.io/singolo/
