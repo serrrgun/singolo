@@ -1,4 +1,4 @@
 # singolo
 
 
-https://serrrgun.github.io/singolo/singolo1
+https://serrrgun.github.io/singolo/
