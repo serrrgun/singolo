@@ -450,17 +450,17 @@ ul {
 }
 
 .social__item--fb {
-	background-image: url(../assets/img/social-icons/facebook.png);
+	background-image: url(assets/img/social-icons/facebook.png);
 }
 
 .social__item--g {
-	background-image: url(../assets/img/social-icons/google.png);
+	background-image: url(assets/img/social-icons/google.png);
 }
 
 .social__item--twitter {
-	background-image: url(../assets/img/social-icons/twitter.png);
+	background-image: url(assets/img/social-icons/twitter.png);
 }
 
 .social__item-in {
-	background-image: url(../assets/img/social-icons/linkedin.png);
+	background-image: url(assets/img/social-icons/linkedin.png);
 }
