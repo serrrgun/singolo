@@ -1,0 +1,111 @@
+@import url("assets/fonts/font.css");
+
+/* global */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Lato, Helvetica, sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* grid */
+
+.container {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  padding: 0 40px;
+}
+
+/* --- blocks --- */
+
+/* portfolio */
+
+.portfolio {
+	padding-top: 65px;
+	background-color: #2d303a;
+}
+
+.portfolio__title {
+	margin: 0;
+  margin-bottom: 19px;
+  font-family: "Lato-Black";
+  font-size: 30px;
+  line-height: 1.2;
+  color: #666d89;
+}
+
+.portfolio__desc {
+	margin: 0;
+  margin-bottom: 5px;
+  font-family: "Lato-Light";
+  font-size: 18px;
+  line-height: 1.6;
+  color: #767e9e;
+}
+
+/* filter */
+
+.filter {
+	padding-top: 5px;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+}
+
+.filter__btn {
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 8px;
+	font-family: 'Lato';
+	font-size: 12px;
+	line-height: 21px;
+	color: #767e9e;
+	border-radius: 5px;
+	border: 1px solid #767e9e;
+	background-color: transparent;
+	cursor: pointer;
+	transition: color .5s ease-in,
+							border .5s ease-in;
+}
+
+.filter__btn:hover,
+.filter__btn:active {
+	color: #dedede;
+	border: 1px solid #dedede;
+}
+
+/* work-list */
+
+.work-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.work-list__item {
+	width: 220px;
+	margin-bottom: 15px;
+	background-color: #464b5e;
+	cursor: pointer;
+}
+
+.work-list__item img {
+	display: block;
+}
+
+/* about */
+
+/* command */
