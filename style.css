@@ -612,17 +612,17 @@ ul {
 }
 
 .contact-list__item--city {
-    background-image: url(/assets/img/contact-icons/location.png);
+    background-image: url(assets/img/contact-icons/location.png);
     background-position: 4px center;
 }
 
 .contact-list__item--phone {
-    background-image: url(/assets/img/contact-icons/phone.png);
+    background-image: url(assets/img/contact-icons/phone.png);
     background-position: 2px center;
 }
 
 .contact-list__item--mail {
-    background-image: url(/assets/img/contact-icons/mail.png);
+    background-image: url(assets/img/contact-icons/mail.png);
 }
 
 /* footer */
