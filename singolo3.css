@@ -75,7 +75,7 @@ ul {
 .contacts {
     background-color: #f06c64;
     padding-top: 59px;
-    padding-bottom: 66px;
+    padding-bottom: 8px;
     border-bottom: 6px solid #ea676b;
 }
 
@@ -101,10 +101,7 @@ ul {
 }
 
 .form__input {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+	padding: 12px 15px;
     margin-bottom: 16px;
     background-color: #d6564f;
     border: none;
@@ -125,8 +122,9 @@ ul {
 .form__textarea {
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 11px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
     resize: none;
     background-color: #d6564f;
     border: none;
@@ -142,6 +140,24 @@ ul {
     font-size: 12px;
     line-height: 1.2;
     color: #f48c8f;
+}
+
+.form__btn 	{
+	padding: 10px 0;
+	border: none;
+	border-radius: 5px;
+	background-color: #d6564f;
+	font-family: 'Lato';
+    font-size: 16px;
+    line-height: 1.2;
+	color: #f48c8f;
+	cursor: pointer;
+	transition: background-color .3s ease-in;
+}
+
+.form__btn:hover,
+.form__btn:active {
+	background-color: #a7403a;
 }
 
 /* info */
@@ -162,10 +178,10 @@ ul {
 
 .info__desc {
     margin: 0;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
     font-family: 'Lato';
     font-size: 12px;
-    line-height: 1.8;
+    line-height: 1.85;
     color: #f0d8d9;
 }   
 
@@ -193,17 +209,17 @@ ul {
 }
 
 .contact-list__item--city {
-    background-image: url(/assets/img/contact-icons/location.png);
+    background-image: url(assets/img/contact-icons/location.png);
     background-position: 4px center;
 }
 
 .contact-list__item--phone {
-    background-image: url(/assets/img/contact-icons/phone.png);
+    background-image: url(assets/img/contact-icons/phone.png);
     background-position: 2px center;
 }
 
 .contact-list__item--mail {
-    background-image: url(/assets/img/contact-icons/mail.png);
+    background-image: url(assets/img/contact-icons/mail.png);
 }
 
 /* footer */
@@ -218,6 +234,8 @@ ul {
 }
 
 .footer__copyright {
+	padding-bottom: 4px;
+	padding-left: 2px;
     font-size: 12px;
     color: #666d89;
 }
