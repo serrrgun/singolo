@@ -8,7 +8,8 @@
 </head>
 <body>
 	<div class="container">
-		<header class="header wrapper">
+        <div class="js-link-block" id="home"></div>
+		<header class="header wrapper" >
 			<div class="header__logo">
 				<h1 class="logo">
 					singolo
@@ -18,11 +19,11 @@
 			<div class="header__nav">
 				<nav class="navigation">
 					<ul class="navigation__list">
-						<li class="navigation__item navigation__item--active"><a href="#">home</a></li>
-						<li class="navigation__item"><a href="#">services</a></li>
-						<li class="navigation__item"><a href="#">portfolio</a></li>
-						<li class="navigation__item"><a href="#">about</a></li>
-						<li class="navigation__item"><a href="#">contact</a></li>
+						<li class="navigation__item navigation__item--active"><a href="#home">home</a></li>
+						<li class="navigation__item"><a href="#services">services</a></li>
+						<li class="navigation__item"><a href="#portfolio">portfolio</a></li>
+						<li class="navigation__item"><a href="#about">about</a></li>
+						<li class="navigation__item"><a href="#contacts">contact</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -40,7 +41,7 @@
 				<button class="slider__btn slider__btn--prev" type="button"></button>
 				<button class="slider__btn slider__btn--next" type="button"></button>
 			</div>
-			<section class="services wrapper">
+			<section class="services wrapper js-link-block" id="services">
 				<h2 class="services__title">Our Services</h2>
 				<p class="services__desc">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
 				<div class="services__items">
@@ -90,7 +91,7 @@
 					</ul>
 				</div>
             </section>
-            <section class="portfolio wrapper">
+            <section class="portfolio wrapper js-link-block" id="portfolio">
                 <h2 class="portfolio__title title">Portfolio</h2>
                 <p class="portfolio__desc paragraph">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                 <div class="filter">
@@ -138,7 +139,7 @@
                     </a>
                 </div>
             </section>
-            <section class="about wrapper">
+            <section class="about wrapper js-link-block" id="about">
                 <h2 class="about__title title">About Us</h2>
                 <p class="about__desc paragraph">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 <div class="command">
@@ -189,7 +190,7 @@
                     </div>
                 </div>
             </section>
-            <section class="contacts wrapper">
+            <section class="contacts wrapper js-link-block" id="contacts">
                 <h2 class="contacts__title title title--white">Get a Quote</h2>
                 <p class="contacts__desc paragraph paragraph--white">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 <div class="contacts__wrapper">
@@ -229,6 +230,7 @@
                 </div>
             </div>
         </footer>
-	</div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

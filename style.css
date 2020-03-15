@@ -73,12 +73,16 @@ ul {
 /* header */
 
 .header {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
 	display: flex;
 	justify-content: space-between;
 	padding-top: 28px;
 	padding-bottom: 31px;
 	background-color: #2d303a;
 	border-bottom: 6px solid #323746;
+	z-index: 1;
 }
 
 .header__nav {
@@ -371,6 +375,7 @@ ul {
 	background-color: #464b5e;
 	overflow: hidden;
 	cursor: pointer;
+	transition: outline .4s ease-in-out;
 }
 
 .work-list__item:nth-child(n+13) {
