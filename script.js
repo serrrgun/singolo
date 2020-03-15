@@ -100,3 +100,42 @@ form.addEventListener('submit', function(evt) {
 popupBtn.addEventListener('click', function() {
     popup.style.display = 'none'
 }) 
+
+// -- form
+
+// slider
+
+const items = document.querySelectorAll('.slider__item')
+const sliderBtnPrev = document.querySelector('.slider__btn--prev');
+const sliderBtnNext = document.querySelector('.slider__btn--next');
+
+let current = 0;
+
+function slider() {
+    items.forEach(elem => {
+        elem.classList.remove('slider__item--active')
+    })
+    items[current].classList.add('slider__item--active')
+}
+
+sliderBtnPrev.addEventListener('click', function() {
+    if (current - 1 === -1) {
+        current = items.length - 1
+    } else {
+        current--
+    }
+    slider()
+})
+
+sliderBtnNext.addEventListener('click', function() {
+    if (current + 1 === items.length) {
+        current = 0
+    } else {
+        current++
+    }
+    slider()
+})
+
+//slider()
+
+// -- slider
