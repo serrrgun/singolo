@@ -345,8 +345,8 @@ ul {
 	border: 1px solid #767e9e;
 	background-color: transparent;
 	cursor: pointer;
-	transition: color .5s ease-in,
-							border .5s ease-in;
+	transition: color .3s ease-in,
+				border .5s ease-in;
 }
 
 .filter__btn--active {
@@ -375,7 +375,7 @@ ul {
 	background-color: #464b5e;
 	overflow: hidden;
 	cursor: pointer;
-	transition: outline .4s ease-in-out;
+	transition: outline .2s ease-in-out;
 }
 
 .work-list__item:nth-child(n+13) {
@@ -663,4 +663,68 @@ ul {
 	padding-left: 2px;
     font-size: 12px;
     color: #666d89;
+}
+
+/* popup */
+
+.popup {
+	display: none;
+}
+
+.popup__overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 5;
+}
+
+.popup__window {
+	width: 30%;
+	padding: 40px 30px;
+	background-color: #F06C64;
+	color: #ffffff;
+	border-radius: 5px;
+}
+
+.popup__title {
+	margin: 0;
+	margin-bottom: 40px;
+	font-size: 40px;
+	text-align: center;
+}
+
+.popup__theme,
+.popup__desc {
+	margin-bottom: 20px;
+	font-size: 30px;
+	font-weight: 500;
+}
+
+.popup__desc {
+	margin-bottom: 30px;
+}
+
+.popup__btn {
+	width: 100%;
+	padding: 10px 0;
+	border: none;
+	border-radius: 5px;
+	background-color: #d6564f;
+	font-family: 'Lato';
+    font-size: 20px;
+    line-height: 1.2;
+	color: #f1cccd;
+	cursor: pointer;
+	transition: background-color .3s ease-in;
+}
+
+.popup__btn:hover,
+.popup__btn:active {
+	background-color: #a7403a;
 }

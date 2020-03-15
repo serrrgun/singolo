@@ -72,3 +72,31 @@ workList.forEach(elem => {
 })
 
 // -- portfolio
+
+// form
+
+const form = document.querySelector('.form');
+const popup = document.querySelector('.popup');
+const popupBtn = document.querySelector('.popup__btn');
+
+const subjectForm = document.querySelector('#subject');
+const subjectPopup = document.querySelector('.popup__theme');
+
+const descriptionForm = document.querySelector('#describe');
+const descriptionPopup = document.querySelector('.popup__desc')
+console.log(descriptionForm.value);
+
+form.addEventListener('submit', function(evt) {
+    evt.preventDefault();
+    if(subjectForm.value.length > 0) {
+        subjectPopup.textContent = `Тема: ${subjectForm.value}`
+    }
+    if(descriptionForm.value.length > 0) {
+        descriptionPopup.textContent = `Описание: ${descriptionForm.value}`
+    }
+    popup.style.display = 'block'
+})
+
+popupBtn.addEventListener('click', function() {
+    popup.style.display = 'none'
+}) 
