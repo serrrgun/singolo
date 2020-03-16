@@ -108,34 +108,63 @@ popupBtn.addEventListener('click', function() {
 const items = document.querySelectorAll('.slider__item')
 const sliderBtnPrev = document.querySelector('.slider__btn--prev');
 const sliderBtnNext = document.querySelector('.slider__btn--next');
+let currentItem = 0;
+let isEnabled = true;
 
-let current = 0;
+function chengeCurrentItem(n) {
+    currentItem = (n + items.length) % items.length;
+}
 
-function slider() {
-    items.forEach(elem => {
-        elem.classList.remove('slider__item--active')
+function hideItem(direction) {
+    isEnabled = false;
+    items[currentItem].classList.add(direction);
+    items[currentItem].addEventListener('animationend', function() {
+        this.classList.remove('slider__item--active', direction);
     })
-    items[current].classList.add('slider__item--active')
+}
+
+function showItem(direction) {
+    items[currentItem].classList.add('slider__item--next', direction);
+    items[currentItem].addEventListener('animationend', function() {
+        this.classList.remove('slider__item--next', direction);
+        this.classList.add('slider__item--active');
+        isEnabled = true;
+    })
+}
+
+function nextItem(num) {
+    hideItem('to-left');
+    chengeCurrentItem(num + 1);
+    showItem('from-right')
+}
+
+function previousItem(num) {
+    hideItem('to-right');
+    chengeCurrentItem(num - 1);
+    showItem('from-left')
 }
 
 sliderBtnPrev.addEventListener('click', function() {
-    if (current - 1 === -1) {
-        current = items.length - 1
-    } else {
-        current--
+    if (isEnabled) {
+        previousItem(currentItem)
     }
-    slider()
-})
+});
 
 sliderBtnNext.addEventListener('click', function() {
-    if (current + 1 === items.length) {
-        current = 0
-    } else {
-        current++
+    if (isEnabled) {
+        nextItem(currentItem)
     }
-    slider()
 })
 
-//slider()
-
 // -- slider
+
+// phone
+
+const phonesBtn = document.querySelectorAll('.phone__btn');
+const phonesBg = document.querySelectorAll('.phone__bg');
+
+phonesBtn.forEach((elem, index) => {
+    elem.addEventListener('click', function () {
+        phonesBg[index].classList.toggle('phone__bg--opacity')
+    })
+})
