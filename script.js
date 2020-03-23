@@ -10,7 +10,7 @@ function anim(duration) {
         cancelAnimationFrame(temp);
         const start = performance.now();
         const from = window.pageYOffset || document.documentElement.scrollTop,
-        to = sel.getBoundingClientRect().top - header.offsetHeight;
+        to = sel.getBoundingClientRect().top - header.offsetHeight + 1;
         requestAnimationFrame(function step(timestamp) {
             var progress = (timestamp - start) / duration;
             1 <= progress && (progress = 1);
