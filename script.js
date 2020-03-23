@@ -60,6 +60,23 @@ function onScroll() {
     })
 }
 
+// menu mobile 
+const menuBtn = document.querySelector('.header__btn');
+
+menuBtn.addEventListener('click', function() {
+    header.classList.toggle('header--mobile-menu')
+})
+
+
+arrLinks.forEach(elem => {
+    elem.addEventListener('click', function() {
+        if (header.classList.contains('header--mobile-menu')) {
+            header.classList.remove('header--mobile-menu')
+        }
+    })
+})
+
+
 // --header
 
 // portfolio
