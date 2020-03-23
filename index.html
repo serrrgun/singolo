@@ -8,7 +8,8 @@
 </head>
 <body>
 	<div class="container">
-		<header class="header wrapper">
+        <div class="js-link-block" id="home"></div>
+		<header class="header wrapper" >
 			<div class="header__logo">
 				<h1 class="logo">
 					singolo
@@ -16,31 +17,48 @@
 				</h1>
 			</div>
 			<div class="header__nav">
+                <div class="header__btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
 				<nav class="navigation">
 					<ul class="navigation__list">
-						<li class="navigation__item navigation__item--active"><a href="#">home</a></li>
-						<li class="navigation__item"><a href="#">services</a></li>
-						<li class="navigation__item"><a href="#">portfolio</a></li>
-						<li class="navigation__item"><a href="#">about</a></li>
-						<li class="navigation__item"><a href="#">contact</a></li>
+						<li class="navigation__item navigation__item--active"><a href="#home">home</a></li>
+						<li class="navigation__item"><a href="#services">services</a></li>
+						<li class="navigation__item"><a href="#portfolio">portfolio</a></li>
+						<li class="navigation__item"><a href="#about">about</a></li>
+						<li class="navigation__item"><a href="#contacts">contact</a></li>
 					</ul>
-				</nav>
+                </nav>
+                <div class="header__overlay"></div>
 			</div>
 		</header>
 		<main>
-			<div class="slider wrapper">
-				<div class="slider__item">
-					<div class="slider__item-img slider__item-img--vertical">
-						<img src="assets/img/phone-vertical.png" alt="Vertical phone">
-					</div>
-					<div class="slider__item-img slider__item-img--horisontal">
-						<img src="assets/img/phone-horisontal.png" alt="Hotizontal phone">
-					</div>
-				</div>
+			<div class="slider">
+				<div class="slider__item slider__item--active">
+                    <div class="slider-item1">
+                        <div class="phone phone--vertical">
+                            <img src="assets/img/slider/phone-vertical.png" alt="Vertical phone">
+                            <img class="phone__bg phone__bg--vertical" src="/assets/img/slider/vertical-bg.png" alt="Vertical phone">
+                            <img src="/assets/img/slider/phone-batton.png" alt="button" class="phone__btn phone__btn--vertical">
+                        </div>
+                        <div class="phone phone--horisontal">
+                            <img src="assets/img/slider/phone-horizontal.png" alt="Hotizontal phone">
+                            <img class="phone__bg phone__bg--horizontal" src="/assets/img/slider/horizontal-bg.png" alt="Hotizontal phone">
+                            <img src="/assets/img/slider/phone-batton.png" alt="button" class="phone__btn phone__btn--horizontal">
+                        </div>
+                    </div>
+                </div>   
+                <div class="slider__item">
+                    <div class="slider__item2">
+                        <img src="/assets/img/slider/Slider.jpg" alt="slide-2">
+                    </div>
+                </div>
 				<button class="slider__btn slider__btn--prev" type="button"></button>
 				<button class="slider__btn slider__btn--next" type="button"></button>
 			</div>
-			<section class="services wrapper">
+			<section class="services wrapper js-link-block" id="services">
 				<h2 class="services__title">Our Services</h2>
 				<p class="services__desc">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
 				<div class="services__items">
@@ -90,7 +108,7 @@
 					</ul>
 				</div>
             </section>
-            <section class="portfolio wrapper">
+            <section class="portfolio wrapper js-link-block" id="portfolio">
                 <h2 class="portfolio__title title">Portfolio</h2>
                 <p class="portfolio__desc paragraph">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                 <div class="filter">
@@ -138,7 +156,7 @@
                     </a>
                 </div>
             </section>
-            <section class="about wrapper">
+            <section class="about wrapper js-link-block" id="about">
                 <h2 class="about__title title">About Us</h2>
                 <p class="about__desc paragraph">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 <div class="command">
@@ -189,7 +207,7 @@
                     </div>
                 </div>
             </section>
-            <section class="contacts wrapper">
+            <section class="contacts wrapper js-link-block" id="contacts">
                 <h2 class="contacts__title title title--white">Get a Quote</h2>
                 <p class="contacts__desc paragraph paragraph--white">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 <div class="contacts__wrapper">
@@ -229,6 +247,17 @@
                 </div>
             </div>
         </footer>
-	</div>
+    </div>
+    <div class="popup">
+        <div class="popup__overlay">
+            <div class="popup__window">
+                <h3 class="popup__title">Письмо отправлено</h3>
+                <div class="popup__theme">Без темы</div>
+                <div class="popup__desc">Без описания</div>
+                <button class="popup__btn" type="button">Ok</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
