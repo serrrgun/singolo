@@ -97,6 +97,7 @@ ul {
 
 .header__logo {
 	margin: 0;
+	transition: .3s ease-in;
 }
 
 .header__btn {
@@ -126,6 +127,7 @@ ul {
 		height: 20px;
 		z-index: 10;
 		cursor: pointer;
+		transition: transform .3s ease-in;
 	}
 
 	.header__btn span {
@@ -149,6 +151,21 @@ ul {
 
 	.header--mobile-menu .header__overlay {
 		transform: translateX(0%);
+	}
+
+	.header--mobile-menu .header__btn {
+		transform: rotate(90deg);
+	}
+
+	.header--mobile-menu .header__logo {
+		position: fixed;
+		left: 20%;
+		top: 20px;
+		z-index: 10;
+	}
+
+	.header--mobile-menu.header {
+		padding-top: 34px;
 	}
 }
 
