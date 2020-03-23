@@ -34,6 +34,32 @@ arrLinks.forEach((elem, index) => {
     })
 })
 
+document.addEventListener('scroll', onScroll);
+
+function onScroll() {
+    const scrollPosition = window.scrollY;
+    
+    arrBlocks.forEach((elem, index) => {
+        if ((elem.offsetTop - header.offsetHeight) <= scrollPosition && (elem.offsetTop + elem.offsetHeight) > scrollPosition) {
+            
+            arrLinks.forEach(elem => {
+                elem.classList.remove('navigation__item--active')
+
+                if (elem === arrLinks[index]) {
+                    elem.classList.add('navigation__item--active')
+                }
+            })
+        }
+
+        else if (scrollPosition === 0) {
+            arrLinks.forEach((elem, index) => {
+                elem.classList.remove('navigation__item--active')
+            })
+            arrLinks[0].classList.add('navigation__item--active')
+        }
+    })
+}
+
 // --header
 
 // portfolio
@@ -45,9 +71,11 @@ const workListContainer = document.querySelector('.work-list')
 filtersButtons.forEach(btn => {
     btn.addEventListener('click', function() {
         filtersButtons.forEach(button => {
-            button.classList.remove('filter__btn--active')
+            button.classList.remove('filter__btn--active');
+            button.disabled = false
         })
         btn.classList.add('filter__btn--active')
+        btn.disabled = true;
         workList.forEach(work => {
             work.remove()
         });
@@ -84,7 +112,6 @@ const subjectPopup = document.querySelector('.popup__theme');
 
 const descriptionForm = document.querySelector('#describe');
 const descriptionPopup = document.querySelector('.popup__desc')
-console.log(descriptionForm.value);
 
 form.addEventListener('submit', function(evt) {
     evt.preventDefault();
