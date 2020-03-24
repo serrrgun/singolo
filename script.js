@@ -139,6 +139,7 @@ form.addEventListener('submit', function(evt) {
         descriptionPopup.textContent = `Описание: ${descriptionForm.value}`
     }
     popup.style.display = 'block'
+    form.reset()
 })
 
 popupBtn.addEventListener('click', function() {
