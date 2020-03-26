@@ -110,9 +110,9 @@ workList.forEach(elem => {
     elem.addEventListener('click', function(evt) {
         evt.preventDefault()
         workList.forEach(item => {
-            item.style.outline = 'none'
+            item.classList.remove('work-list__item--active')
         })
-        elem.style.outline = '5px solid #F06C64'
+        elem.classList.add('work-list__item--active')
     })
 })
 
@@ -150,9 +150,10 @@ popupBtn.addEventListener('click', function() {
 
 // slider
 
-const items = document.querySelectorAll('.slider__item')
-const sliderBtnPrev = document.querySelector('.slider__btn--prev');
-const sliderBtnNext = document.querySelector('.slider__btn--next');
+const sliderContainer = document.querySelector('.slider')
+const items = sliderContainer.querySelectorAll('.slider__item')
+const sliderBtnPrev = sliderContainer.querySelector('.slider__btn--prev');
+const sliderBtnNext = sliderContainer.querySelector('.slider__btn--next');
 let currentItem = 0;
 let isEnabled = true;
 
