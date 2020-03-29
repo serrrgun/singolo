@@ -301,7 +301,6 @@ ul {
 .slider__item {
 	position: relative;
 	display: none;
-	height: 100%;
 	animation: 1s ease-in-out;
 	margin: 0 auto;
 }
@@ -365,15 +364,15 @@ ul {
 
 @media (min-width: 768px) and (max-width: 1019px) {
 	.slider {
-		min-height: auto;
+		min-height: 100%;
+	}
+
+	.slider__item {
+		height: calc(100vw * 0.587);
 	}
 	
 	.slider-item1 {
-		padding: 37px 11% 40px 11%;
-	}
-
-	.slider__item2 img {
-		width: 80%;
+		padding: 37px 11% 50px 11%;
 	}
 
 	.slider__btn--prev {
@@ -390,12 +389,12 @@ ul {
 		min-height: 100%;
 	}
 
-	.slider-item1 {
-		padding: 5.1% 10.7%;
-		border-bottom: none;
+	.slider__item {
+		height: calc(100vw * 0.587);
 	}
 
-	.slider__item2 {
+	.slider-item1 {
+		padding: 5.3% 10.7%;
 		border-bottom: none;
 	}
 
@@ -685,6 +684,18 @@ ul {
 @media (min-width: 768px) and (max-width: 1019px) {
 	.filter {
 		margin-bottom: 17px;
+	}
+}
+
+@media (max-width: 767px) {
+	.filter {
+		display: flex;
+		flex-wrap: wrap;
+		padding-bottom: 5px;
+	}
+
+	.filter__btn {
+		margin-bottom: 5px;
 	}
 }
 
@@ -1231,6 +1242,12 @@ ul {
 }
 
 @media (min-width: 768px) and (max-width: 1019px) {
+	.popup__window {
+		width: 80%;
+	}
+}
+
+@media (max-width: 767px) {
 	.popup__window {
 		width: 80%;
 	}
