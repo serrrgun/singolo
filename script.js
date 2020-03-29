@@ -101,7 +101,6 @@ filtersButtons.forEach(btn => {
         });
         workList.forEach(work => {
             workListContainer.append(work)
-            work.style.outline = 'none'
         });
     })
 })
