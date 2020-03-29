@@ -213,9 +213,9 @@
                 <div class="contacts__wrapper">
                     <form class="form" action="#">
                         <label class="visually-hidden" for="name">Name</label>
-                        <input class="form__input" type="text" name="name" id="name" placeholder="Name (Required)" required>
+                        <input class="form__input" type="text" name="name" id="name" placeholder="Name (Required)" pattern="[A-Za-zА-Яа-я-\s']{1,35}" maxlength="35"  required>
                         <label class="visually-hidden" for="email">Email</label>
-                        <input class="form__input" type="email" name="email" id="email" placeholder="Email (Required)" required>
+                        <input class="form__input" type="email" name="email" id="email" placeholder="Email (Required)" pattern="[a-zA-Z0-9-\._]+@[a-zA-Z]+\.[a-zA-Z]{2,6}" required>
                         <label class="visually-hidden" for="subject">Subject</label>
                         <input class="form__input" type="text" name="subject" id="subject" placeholder="Subject">
                         <label class="visually-hidden" for="describe">Describe your project in detail...</label>
